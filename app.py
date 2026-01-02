@@ -136,16 +136,17 @@ if st.button("Fetch Data"):
             for i, article in enumerate(news_articles):
                 st.write(f"🔹 {i+1}. {article}")
 
-            st.subheader("📌 Sentiment-based Recommendation:")
+            st.subheader("Sentiment-based Recommendation:")
             st.markdown(f"**{recommendation}**")
 
         else:
-            st.warning("⚠️ No news articles found for this stock.")
+            st.warning("No news articles found for this stock.")
 
-        st.subheader("📈 Predicted Stock Price")
+        st.subheader("Predicted Stock Price")
         predicted_price = predict_stock(df)
         if predicted_price:
-            st.success(f"📌 **Predicted Closing Price for Next Day:** **${predicted_price:.2f}**")
+            st.success(f" **Predicted Closing Price for Next Day:** **${predicted_price:.2f}**")
         else:
-            st.error("⚠️ Not enough data to make a prediction.")
+            st.error("Not enough data to make a prediction.")
+
 
